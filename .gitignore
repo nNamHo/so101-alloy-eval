@@ -1,0 +1,12 @@
+build/
+install/
+log/
+.vscode/browse.vc.db
+.vscode/browse.vc.db.lock
+*.bak
+*.bak2
+*.bak3
+__pycache__/
+*.pyc
+src/so101_pose_milestone/docs/
+.claude/

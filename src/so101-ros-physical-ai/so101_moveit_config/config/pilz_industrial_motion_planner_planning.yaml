@@ -1,0 +1,22 @@
+# Pilz Industrial Motion Planner pipeline configuration
+# Provides PTP (point-to-point), LIN (linear), and CIRC (circular) planners
+
+planning_plugins:
+  - pilz_industrial_motion_planner/CommandPlanner
+
+# LOCAL MOD: clamp an out-of-bounds start state instead of aborting (see
+# the matching note in ompl_planning.yaml).
+fix_start_state: true
+
+# Request adapters (minimal – Pilz does its own validation)
+request_adapters:
+  - default_planning_request_adapters/ResolveConstraintFrames
+  - default_planning_request_adapters/ValidateWorkspaceBounds
+  - default_planning_request_adapters/CheckStartStateBounds
+  - default_planning_request_adapters/CheckStartStateCollision
+
+# Response adapters
+response_adapters:
+  - default_planning_response_adapters/ValidateSolution
+  - default_planning_response_adapters/DisplayMotionPath
+
