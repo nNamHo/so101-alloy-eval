@@ -36,7 +36,7 @@ joints:
     # unit of P. P=48 hums slightly while holding; if the joint buzzes or
     # oscillates, back off to 40. gravity_comp.py's stiffness for this joint
     # was measured at P=48: change the gain and it must be re-measured.
-    p_coefficient: 24
+    p_coefficient: 48
     i_coefficient: 0
     d_coefficient: 32
     return_delay_time: 0
