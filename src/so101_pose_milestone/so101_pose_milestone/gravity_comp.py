@@ -28,7 +28,7 @@ GRAVITY = np.array([0.0, 0.0, -9.81])
 # wrist_roll about the forearm, so gravity loads neither; they get no correction.
 STIFFNESS = {
     "shoulder_lift": 25.6,   # at P = 16 (varies with load: 35 at target 0, 20 at target 1)
-    "elbow_flex":     16.6,  # at P = 48
+    "elbow_flex":     8.31,  # at P = 48
     "wrist_flex":     4.23,  # at P = 32
 }
 
